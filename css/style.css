@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+  margin: 5px;
+  font-weight: bold;
+  background-color: #b1abab;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#myProgress {
+  position: relative;
+  background-color: #ddd;
+  height: 30px;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+#myProgress h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+}
+
+#myBar {
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #4CAF50;
+}
