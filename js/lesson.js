@@ -42,6 +42,7 @@ function run_circle() {
     var h = 30;
     var tmp = -2;
     var circle = document.getElementById("circle");
+    var text = document.getElementById("text_result");
     t_circle = setInterval(change_circle, 100);
 
     function change_circle () {
@@ -52,6 +53,7 @@ function run_circle() {
         h += tmp;
         circle.style.width = w + 'px';
         circle.style.height= h + 'px';
+        text.innerHTML = 'Width: ' + w + 'px' + ' - ' + 'Height: ' + h + 'px'
     }
 }
 
