@@ -5,14 +5,26 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/lesson.js"></script>
 </head>
-<body onload="reset()">
+<body onload="reset();">
 
 	<h1>Progress Bar</h1>
 	<button onclick="reset()">Reset</button>
-	<button id="btn_Continue" onclick="resume()">Stop</button>
+	<button id="btn_Procees" onclick="resume()">Stop</button>
 	<div id="myProgress">
-		<h1 id="text_process">0%</h1>
+		<h2 id="text_process">0%</h2>
 		<div id="myBar"></div>
+	</div>
+
+	<!-- <h1>Change size circle</h1>
+	<button id="btn_Circle" onclick="stop_circle()">Stop</button>
+	<div id="circle"></div> -->
+
+	<h1>Control box</h1>
+	<div id="box">
+		<div id="box_child"></div>
+	</div>
+	<div id="control_line">
+		<dir id="control"></dir>
 	</div>
 
 </body>
