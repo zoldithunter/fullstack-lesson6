@@ -1,5 +1,7 @@
 var t_process_bar = null;
 var t_circle = null;
+var t_zoomout = null;
+var t_opcity = null;
 var width = 0;
 var cont = 1;
 var cont_circle = 1;
@@ -67,5 +69,83 @@ function stop_circle() {
         run_circle();
         btn.innerHTML = "Stop";
         cont_circle = 1;
+    }
+}
+
+// Control box
+
+function showVal(value) {
+    var box_child = document.getElementById("box_child"); // range 100
+    var data = (value <= 0) ? 1 : (value >= 95) ? 94 : value;
+    box_child.style.left = data + '%';
+}
+
+
+// Zoom Out
+
+function zoom_out() {
+    // reset 
+    clearInterval(t_zoomout);
+    var el_zoom = document.getElementById("zoom_out");
+    el_zoom.style.width = '40%';
+    el_zoom.style.height = '150px';
+
+    // zoom out
+    var current_w = el_zoom.offsetWidth;
+    var current_h = el_zoom.offsetHeight;
+    var step = 1;
+    t_zoomout = setInterval(zoom_el, 10);
+    function zoom_el() {
+        if (current_w > current_h) {
+            current_w -= step;
+        } else {
+            current_h -= step;
+        }
+        el_zoom.style.width = current_w + 'px';
+        el_zoom.style.height = current_h + 'px';
+        if (current_w <= 0 || current_h <= 0) {
+            clearInterval(t_zoomout);
+        }
+    }
+}
+
+function change_color() {
+    var box_color = document.getElementById("box_color");
+    var input_r = document.getElementById("range_r").value;
+    var input_g = document.getElementById("range_g").value;
+    var input_b = document.getElementById("range_b").value;
+    box_color.style.backgroundColor = "rgb(" + input_r + "," + input_g + "," + input_b + ")";
+}
+
+
+// Opacity
+
+function opcity() {
+    clearInterval(t_opcity);
+    var run = 1;
+    var step = 0.02;
+    var value = 1;
+    var box1 = document.getElementById("opacity_box1");
+    var box2 = document.getElementById("opacity_box2");
+    t_opcity = setInterval(run_opacity, 100);
+
+    function run_opacity() {
+        console.log(value);
+        value -= step;
+        if (run == 1) {
+            box1.style.opacity = value;
+            if (value <= 0) {
+                run = 2;
+                value = 1;
+                box1.style.opacity = 1;
+            }
+        } else {
+            box2.style.opacity = value;
+            if (value <= 0) {
+                run = 1;
+                value = 1;
+                box2.style.opacity = 1;
+            }
+        }
     }
 }
