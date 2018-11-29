@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="js/lesson.js"></script>
 </head>
 <!-- Run circle, opcity -->
-<body onload="reset(); opcity(); run_circle()">
+ <body onload="reset(); opcity(); run_circle()">
 
 	<h1>Progress Bar</h1>
 	<button onclick="reset()">Reset</button>
@@ -18,10 +18,12 @@
 
 	<h1>Control box</h1>
 	<div id="box">
-		<div id="box_child"></div>
+		<div id="box_child">
+			<h3 id="box_content">0%</h3>
+		</div>
 	</div>
 	<div id="control_line">
-		<input type="range" min="1" max="100" step="1" value="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+		<input type="range" min="0" max="100" step="1" value="0" oninput="showVal(this.value)" onchange="showVal(this.value)">
 	</div>
 
 	<h1>Zoom out div</h1>

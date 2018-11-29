@@ -56,9 +56,8 @@ button {
 /** Control Box **/
 
 #box {
-    position: relative;
     margin: auto;
-    height: 100px;
+    height: 70px;
     width: 80%;
     background-color: green;
     border-radius: 5px;
@@ -66,13 +65,15 @@ button {
 }
 
 #box_child {
-    position: absolute;
-    top: 10px;
-    left: 10px;
     height: 70px;
     width: 70px;
     background-color: red;
     border-radius: 5px;
+    text-align: center;
+}
+
+#box_child h3 {
+    line-height: 70px;
 }
 
 #control_line {
@@ -140,4 +141,36 @@ button {
     width: 100px;
     margin-left: 200px;
     background-color: blue;
+}
+
+
+#slide {
+    background-color: green;
+    margin: auto;
+    width: 50%;
+    height: 250px;
+}
+
+#list_img {
+    background-color: red;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
+#btn_Slide {
+    text-align: center;
+}
+
+.img_slide {
+    display: none;
+    width: 150px;
+    height: 90%;
+    margin: 10px;
+    float: left;
+    border-radius: 5px;
+}
+
+.show {
+    display: inline-block;
 }

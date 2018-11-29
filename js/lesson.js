@@ -76,8 +76,12 @@ function stop_circle() {
 
 function showVal(value) {
     var box_child = document.getElementById("box_child"); // range 100
-    var data = (value <= 0) ? 1 : (value >= 95) ? 94 : value;
-    box_child.style.left = data + '%';
+    var box_w = document.getElementById("box").offsetWidth;
+    // var data = (value <= 0) ? 1 : (value >= 95) ? 94 : value;
+    box_w -= box_child.offsetWidth;
+    var marginLeft = (box_w * value)/100;
+    box_child.style.marginLeft = marginLeft + 'px';
+    document.getElementById("box_content").innerHTML = value + "%"
 }
 
 
@@ -130,7 +134,6 @@ function opcity() {
     t_opcity = setInterval(run_opacity, 100);
 
     function run_opacity() {
-        console.log(value);
         value -= step;
         if (run == 1) {
             box1.style.opacity = value;
