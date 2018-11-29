@@ -79,18 +79,65 @@ button {
     margin: auto;
     width: 80%;
     height: 10px;
-    border-radius: 5px;
-    background-color: green;
-    position: relative;
 }
 
-#control {
-    position: absolute;
-    top: -3px;
-    left: 36px;
-    height: 18px;
-    width: 18px;
-    background-color: blue;
-    border-radius: 50%;
+#control_line input {
+    width: 100%;
     cursor: pointer;
+}
+
+
+/** Zoom Out **/
+
+#zoom_out {
+    margin-left: 20%;
+    height: 150px;
+    width: 40%;
+    background-color: green;
+}
+
+
+/** Change color **/
+
+#box_color {
+    margin: auto;
+    width: 20%;
+    height: 150px;
+    background-color: black;
+}
+
+#line_change_color div {
+    margin: auto;
+    margin-top: 10px;
+    width: 22%;
+    display: block;
+}
+
+#line_change_color div label {
+    float: left;
+}
+
+#line_change_color div input {
+    margin-left: 10px;
+    width: 90%;
+    cursor: pointer;
+}
+
+
+/** Opacity **/
+
+#opacity_box1 {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-left: 150px;
+    background-color: green;
+}
+
+#opacity_box2 {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-left: 200px;
+    background-color: blue;
 }
