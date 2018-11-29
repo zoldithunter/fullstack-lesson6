@@ -5,7 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/lesson.js"></script>
 </head>
-<body onload="reset(); run_circle()">
+<!-- Run circle, opcity -->
+<body onload="reset(); opcity(); run_circle()">
 
 	<h1>Progress Bar</h1>
 	<button onclick="reset()">Reset</button>
@@ -20,8 +21,33 @@
 		<div id="box_child"></div>
 	</div>
 	<div id="control_line">
-		<dir id="control"></dir>
+		<input type="range" min="1" max="100" step="1" value="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
 	</div>
+
+	<h1>Zoom out div</h1>
+	<button onclick="zoom_out()">Action</button>
+	<div id="zoom_out"></div>
+
+	<h1>Change Color</h1>
+	<div id="box_color"></div>
+	<div id="line_change_color">
+		<div>
+			<label for="range_r">R</label>
+			<input id="range_r" name="range_r" type="range" min="0" max="255" step="1" value="1" oninput="change_color()" onchange="change_color()">
+		</div>
+		<div>
+			<label for="range_g">G</label>
+			<input id="range_g" name="range_g" type="range" min="0" max="255" step="1" value="1" oninput="change_color()" onchange="change_color()">
+		</div>
+		<div>
+			<label for="range_b">B</label>
+			<input id="range_b" name="range_b" type="range" min="0" max="255" step="1" value="1" oninput="change_color()" onchange="change_color()">
+		</div>
+	</div>
+
+	<h1>Opacity</h1>
+	<div id="opacity_box1"></div>
+	<div id="opacity_box2"></div>
 
 	<h1>Change size circle</h1>
 	<button id="btn_Circle" onclick="stop_circle()">Stop</button>
