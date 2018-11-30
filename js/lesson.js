@@ -23,6 +23,8 @@ function reset() {
     width = 0;
     clearInterval(t_process_bar);
     t_process_bar = setInterval(frame, 100);
+    btn.innerHTML = "Stop";
+    cont = 1;
 }
 
 function resume() {
