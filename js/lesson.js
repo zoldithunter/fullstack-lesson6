@@ -23,7 +23,7 @@ function reset() {
     width = 0;
     clearInterval(t_process_bar);
     t_process_bar = setInterval(frame, 100);
-    btn.innerHTML = "Stop";
+    document.getElementById("btn_Procees").innerHTML = "Stop";
     cont = 1;
 }
 
